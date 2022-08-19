@@ -29,5 +29,5 @@ Install dependencies
 ## Start Project
 
 ```
-  npm start
+  npm run dev
 ```
