@@ -2,6 +2,8 @@
 
 <h1> Moviely Project : Next  With Type Script</h1>
 
+<h1> Moviely Project : Next Js  With Type Script</h1>
+
 ## Hello Everyone 🖐
 
 <h4>
