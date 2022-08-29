@@ -37,6 +37,7 @@ const Banner = ({ movies }: moviesProps) => {
         {isLoading && <Loading />}
         <Box className="absolute z-20 inset-0 w-full h-full bg-layout " />
         <Image
+          priority
           layout="fill"
           alt="image"
           src={`${baseUrlOrignal}${movie?.backdrop_path || movie?.poster_path}`}

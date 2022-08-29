@@ -36,7 +36,7 @@ const Home = ({
         <Row title="TV Shows" movies={TVShow && TVShow} />
       </Box>
       {/* Modal */}
-      {isModal && <Modal mediaType="movie"/>}
+      {isModal && <Modal mediaType="movie" />}
     </Container>
   );
 };

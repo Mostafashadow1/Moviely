@@ -8,6 +8,7 @@ const Erorr = () => {
     <div className="grid items-center w-full">
       <Box margin="20px 0px">
         <Image
+          priority
           src={notfound}
           alt="image_notfound"
           style={{ filter: " brightness(0.5)" }}

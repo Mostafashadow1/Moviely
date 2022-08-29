@@ -25,13 +25,14 @@ const Card = ({ movie, page }: movieProps) => {
             <Loading />
           ) : (
             <Image
+              placeholder="blur"
+              src={`${baseUrlOrignal}/${movie?.poster_path}`}
               width="100%"
               height={100}
               layout="responsive"
               className="rounded )"
               style={{ filter: "brightness(0.8)" }}
               alt="thumbnail"
-              src={`${baseUrlOrignal}/${movie?.poster_path}`}
             />
           )}
         </Box>

@@ -40,6 +40,10 @@ const Movie = ({ movie }: movieProps) => {
   "
         >
           <Image
+            placeholder="blur"
+            blurDataURL={`${baseUrlOrignal}/${
+              movie?.backdrop_path || movie?.poster_path
+            }`}
             layout="responsive"
             width={"100%"}
             height={30}

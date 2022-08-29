@@ -25,12 +25,14 @@ const Thumbnail = ({ movie }: movieProps) => {
             <Loading />
           ) : (
             <Image
+              placeholder="blur"
+              blurDataURL={`${baseUrlOrignal}/${movie?.poster_path}`}
+              src={`${baseUrlOrignal}/${movie?.poster_path}`}
               width={215}
               height={300}
               className="rounded )"
               style={{ filter: "brightness(0.8)" }}
               alt="thumbnail"
-              src={`${baseUrlOrignal}/${movie?.poster_path}`}
             />
           )}
         </Box>
@@ -52,9 +54,7 @@ const Thumbnail = ({ movie }: movieProps) => {
           </h6>
           <Box className="flex items-center gap-1 text-[#FDCC0D]">
             <StarIcon />
-            <h6 className="text-base font-semibold">
-              {movie?.vote_average}
-            </h6>
+            <h6 className="text-base font-semibold">{movie?.vote_average}</h6>
           </Box>
         </Box>
       </Box>

@@ -36,6 +36,10 @@ const TVMovie = ({ movie }: movieProps) => {
       ) : (
         <Box className="relative my-4">
           <Image
+            placeholder="blur"
+            blurDataURL={`${baseUrlOrignal}/${
+              movie?.backdrop_path || movie?.poster_path
+            }`}
             layout="responsive"
             width={"100%"}
             height={30}
@@ -124,6 +128,8 @@ const TVMovie = ({ movie }: movieProps) => {
                       className="border border-mainColor p-6 flex flex-col "
                     >
                       <Image
+                        placeholder="blur"
+                        blurDataURL={`${baseUrlOrignal}/${company.logo_path}`}
                         width={100}
                         height={100}
                         src={`${baseUrlOrignal}/${company.logo_path}`}

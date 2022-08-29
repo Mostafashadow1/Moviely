@@ -85,15 +85,16 @@ const Login = () => {
           />
           <Box className="  relative ">
             <Link href="/">
-              <Typography className=" cursor-pointer text-3xl text-redColor bg-black rounded p-4 font-semibold absolute  z-20">
+              <h2 className=" cursor-pointer text-3xl text-redColor bg-black rounded p-4 font-semibold absolute  z-20">
                 Moviely
-              </Typography>
+              </h2>
             </Link>
           </Box>
           <Grid container className="bg-black h-full">
             <Grid item lg={6} className="hidden lg:block">
               <Box className="relative w-full h-full">
                 <Image
+                  priority
                   src={imageLogin}
                   alt="image"
                   layout="fill"
@@ -105,9 +106,9 @@ const Login = () => {
             <Grid item xs={12} lg={6} className="flex items-center">
               <Box className=" w-[90%] sm:w-[80%] md:w-[70%] mx-auto !md:mt-[-50px]">
                 <Box>
-                  <Typography className="capitalize text-4xl   p-1 font-semibold text-redColor">
+                  <h3 className="capitalize text-4xl   p-1 font-semibold text-redColor">
                     login
-                  </Typography>
+                  </h3>
                 </Box>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <Box className="mt-3 space-y-6">

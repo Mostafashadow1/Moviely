@@ -18,7 +18,7 @@ module.exports = {
         layout: "#000000ab",
         redColor: "#E50914",
       },
-
+     
       borderColor: {
         mainColor: "#ffffff1a",
       },
