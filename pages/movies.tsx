@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Banner, Cards, Modal } from "components";
 import { moviesProps } from "types/global";
-import { requestsUrl } from "utils/requestsUrl";
+import { getMoviesPage } from "utils/requestsUrl";
 import { Container, Typography } from "@mui/material";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import Head from "next/head";
@@ -36,7 +36,7 @@ const Movies = ({ movies }: moviesProps) => {
 export default Movies;
 
 export async function getStaticProps() {
-  const res = await fetch(requestsUrl.getMoviesPage);
+  const res = await fetch(getMoviesPage.makeRequest());
   const data = await res.json();
   return {
     props: {

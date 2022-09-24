@@ -1,8 +1,8 @@
+import React from "react";
 import { Box } from "@mui/system";
 import { Banner, Cards, Modal } from "components";
-import React from "react";
 import { moviesProps } from "types/global";
-import { requestsUrl } from "utils/requestsUrl";
+import { getTvShowsPage } from "utils/requestsUrl";
 import { Container, Typography } from "@mui/material";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import Head from "next/head";
@@ -34,7 +34,7 @@ const Tvshows = ({ movies }: moviesProps) => {
 export default Tvshows;
 
 export async function getStaticProps() {
-  const res = await fetch(requestsUrl.getTVShowPage);
+  const res = await fetch(getTvShowsPage.makeRequest());
   const data = await res.json();
   return {
     props: {

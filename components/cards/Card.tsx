@@ -26,6 +26,7 @@ const Card = ({ movie, page }: movieProps) => {
           ) : (
             <Image
               placeholder="blur"
+              blurDataURL={`${baseUrlOrignal}/${movie?.poster_path}`}
               src={`${baseUrlOrignal}/${movie?.poster_path}`}
               width="100%"
               height={100}

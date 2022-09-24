@@ -1,7 +1,15 @@
+import Head from "next/head";
 import { Box, Container } from "@mui/material";
 import { Banner, Modal, Row } from "components";
-import Head from "next/head";
-import { requestsUrl } from "utils/requestsUrl";
+import {
+  getNetflixOriginals,
+  getActionMovies,
+  getTrending,
+  getTopRated,
+  getComedyMovies,
+  getHorrorMovies,
+  getTvShow,
+} from "utils/requestsUrl";
 import { homeProps } from "types/global";
 import { useRecoilState } from "recoil";
 import { modalState } from "recoil/AtomState";
@@ -53,13 +61,13 @@ export async function getStaticProps() {
     horrorMovies,
     getTVShow,
   ] = await Promise.all([
-    fetch(requestsUrl.getActionMovies).then((res) => res.json()),
-    fetch(requestsUrl.getTrending).then((res) => res.json()),
-    fetch(requestsUrl.getTopRated).then((res) => res.json()),
-    fetch(requestsUrl.getNetflixOriginals).then((res) => res.json()),
-    fetch(requestsUrl.getComedyMovies).then((res) => res.json()),
-    fetch(requestsUrl.getHorrorMovies).then((res) => res.json()),
-    fetch(requestsUrl.getTVShow).then((res) => res.json()),
+    fetch(getActionMovies.makeRequest()).then((res) => res.json()),
+    fetch(getTrending.makeRequest()).then((res) => res.json()),
+    fetch(getTopRated.makeRequest()).then((res) => res.json()),
+    fetch(getNetflixOriginals.makeRequest()).then((res) => res.json()),
+    fetch(getComedyMovies.makeRequest()).then((res) => res.json()),
+    fetch(getHorrorMovies.makeRequest()).then((res) => res.json()),
+    fetch(getTvShow.makeRequest()).then((res) => res.json()),
   ]);
 
   return {
